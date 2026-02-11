@@ -1,0 +1,261 @@
+/* =========================================
+   1. الإعدادات العامة والمتغيرات
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+    --primary-color: #1e3a8a;    /* الأزرق الملكي الاحترافي */
+    --accent-color: #dc2626;     /* الأحمر التحذيري للحقائق */
+    --bg-light: #f8fafc;         /* خلفية الصفحة الباردة */
+    --white: #ffffff;
+    --text-main: #0f172a;        /* لون النص الأساسي */
+    --text-muted: #64748b;       /* لون النص الفرعي */
+    --h-height: 80px;            /* ارتفاع الهيدر الثابت */
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+body { 
+    background-color: var(--bg-light); 
+    color: var(--text-main); 
+    padding-top: var(--h-height); /* لمنع اختفاء المحتوى خلف الهيدر */
+    overflow-x: hidden; 
+    line-height: 1.6; 
+}
+
+/* =========================================
+   2. الهيدر (Header) والروابط
+   ========================================= */
+header { 
+    background: var(--white); 
+    width: 100%; 
+    height: var(--h-height); 
+    position: fixed; 
+    top: 0; left: 0; 
+    z-index: 2000; 
+    display: flex; 
+    align-items: center; 
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+}
+
+.header-container { 
+    width: 90%; 
+    max-width: 1400px; 
+    margin: auto; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: relative; 
+}
+
+.logo { 
+    text-decoration: none; 
+    color: var(--primary-color); 
+    font-weight: 800; 
+    font-size: 1.5rem; 
+}
+
+.header-center { 
+    position: absolute; 
+    left: 50%; top: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+.project-title { 
+    font-size: 1.2rem; 
+    font-weight: 700; 
+    color: var(--primary-color); 
+}
+
+/* --- ترتيب زر الهوم واللغة جنباً إلى جنب --- */
+.header-right { 
+    display: flex; 
+    align-items: center; 
+    gap: 25px; /* المسافة بين الرابط والزر */
+}
+
+.navigation a { 
+    text-decoration: none; 
+    color: var(--text-main); 
+    font-weight: 600; 
+    font-size: 0.95rem; 
+    transition: 0.3s;
+}
+
+.navigation a:hover { color: var(--accent-color); }
+
+.lang-btn { 
+    background: transparent; 
+    border: 2px solid var(--primary-color); 
+    color: var(--primary-color); 
+    padding: 6px 18px; 
+    border-radius: 50px; 
+    cursor: pointer; 
+    font-weight: 700; 
+    transition: 0.3s; 
+    white-space: nowrap;
+}
+
+.lang-btn:hover { 
+    background: var(--primary-color); 
+    color: white; 
+}
+
+/* =========================================
+   3. نظام الشبكة والكروت (Grid System)
+   ========================================= */
+.report-grid-section { 
+    padding: 60px 5%; 
+    background: var(--bg-light); 
+}
+
+.report-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; 
+    max-width: 1200px; 
+    margin: auto; 
+}
+
+.report-card { 
+    background: var(--white); 
+    padding: 30px; 
+    border-radius: 20px; 
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); 
+    transition: 0.3s; 
+    border-top: 5px solid var(--primary-color); 
+}
+
+.report-card:hover { transform: translateY(-10px); }
+
+.report-card.highlight { 
+    border-top-color: var(--accent-color); 
+}
+
+/* =========================================
+   4. الأقسام الملتصقة (Sticky Sections)
+   ========================================= */
+.stack-section { 
+    position: sticky; 
+    top: var(--h-height); 
+    height: calc(100vh - var(--h-height)); 
+    display: flex; 
+    align-items: center; 
+    background-color: var(--white); 
+    padding: 0 8%; 
+    border-bottom: 1px solid #e2e8f0; 
+}
+
+.container { 
+    display: flex; 
+    align-items: center; 
+    gap: 60px; 
+    width: 100%; 
+    max-width: 1200px; 
+    margin: auto; 
+}
+
+.container.reverse { flex-direction: row-reverse; }
+
+.text-side { flex: 1; }
+
+.chart-side { flex: 1.2; width: 100%; }
+
+/* =========================================
+   5. المكونات الداخلية (Badges & Charts)
+   ========================================= */
+.badge { 
+    background: rgba(30, 58, 138, 0.1); 
+    color: var(--primary-color); 
+    padding: 5px 15px; 
+    border-radius: 50px; 
+    font-weight: 700; 
+    font-size: 0.85rem; 
+    margin-bottom: 15px; 
+    display: inline-block; 
+}
+
+h2 { 
+    font-size: 2.8rem; 
+    line-height: 1.2; 
+    margin-bottom: 25px; 
+    color: var(--primary-color); 
+}
+
+.chart-box { 
+    background: #ffffff; 
+    padding: 25px; 
+    border-radius: 24px; 
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); 
+    height: 450px; 
+    width: 100%; 
+}
+
+/* =========================================
+   6. الحقائق الطبية ودليل الإنقاذ
+   ========================================= */
+.facts-list, .rescue-guide { 
+    margin-top: 30px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+.fact-entry, .step { 
+    display: flex; 
+    gap: 15px; 
+    padding: 15px; 
+    background: #f1f5f9; 
+    border-radius: 12px; 
+    transition: 0.3s;
+}
+
+.fact-entry:hover, .step:hover { background: #e2e8f0; }
+
+.fact-entry i, .step i { 
+    color: var(--accent-color); 
+    font-size: 1.5rem; 
+    margin-top: 5px; 
+}
+
+.fact-content strong, .step-text h4 { 
+    color: var(--primary-color); 
+    display: block; 
+    margin-bottom: 5px; 
+}
+
+/* =========================================
+   7. الفوتر (Footer) والتجاوب (Responsive)
+   ========================================= */
+.footer { 
+    background: var(--primary-color); 
+    color: white; 
+    padding: 40px 10%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+@media (max-width: 768px) {
+    .header-center { display: none; }
+    
+    .stack-section { 
+        position: relative; 
+        height: auto; 
+        padding: 60px 20px; 
+    }
+    
+    .container, .container.reverse { 
+        flex-direction: column !important; 
+        text-align: center; 
+    }
+    
+    h2 { font-size: 1.8rem; }
+    
+    .chart-box { height: 350px; }
+}

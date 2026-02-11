@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مبادرة بصيرة | رؤية لإنقاذ الأرواح</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style_report.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <a href="index.html" class="logo">Baseera | بصيرة</a>
+            </div>
+            <div class="header-center">
+                <h1 class="project-title" data-key="report_main_title">رؤية لإنقاذ الأرواح</h1>
+            </div>
+            <div class="header-right">
+                <nav class="navigation">
+                    <a href="index.html" data-key="nav_home">الرئيسية</a>
+                </nav>
+                <button id="lang-switch" class="lang-btn">English</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="report-grid-section">
+            <div class="report-grid">
+                <div class="report-card">
+                    <span class="badge" data-key="timing_badge"><i class="fas fa-history"></i> نبض الأزمة</span>
+                    <h2 data-key="timing_title">الواقع الحالي</h2>
+                    <p data-key="timing_desc">الوفيات تضاعفت 4 مرات في السنوات الأخيرة؛ الصمت لم يعد خياراً والتحرك الجماعي هو الحل.</p>
+                </div>
+                <div class="report-card highlight">
+                    <span class="badge" data-key="content_badge"><i class="fas fa-exclamation-triangle"></i> خطر الفنتانيل</span>
+                    <h2 data-key="content_title">التهديد الخفي</h2>
+                    <p data-key="content_desc">أكثر من 5,600 عائلة فقدت أحباءها بسبب هذه المادة وحدها؛ المعرفة هي درع الحماية الأول.</p>
+                </div>
+                <div class="report-card">
+                    <span class="badge" data-key="sentiment_badge"><i class="fas fa-shield-alt"></i> رسالة للشباب</span>
+                    <h2 data-key="sentiment_title">حماية مجتمعنا</h2>
+                    <p data-key="sentiment_desc">الرجال هم الأكثر عرضة للخطر؛ وعينا اليوم وفهمنا للمخاطر هو الأمان لهم غداً.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="stack-section" id="timing">
+            <div class="container">
+                <div class="text-side">
+                    <h2 data-key="timing_section_title">رحلة الأرقام المؤلمة</h2>
+                    <p data-key="timing_section_desc">هذا الرسم يوضح زيادة الحالات سنوياً، وهدفنا هو تحويل هذا المنحنى للأسفل عبر التكاتف ونشر الوعي.</p>
+                </div>
+                <div class="chart-side">
+                    <div class="chart-box"><canvas id="timingChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stack-section" id="content">
+            <div class="container reverse">
+                <div class="text-side">
+                    <h2 data-key="content_section_title">ماذا نواجه اليوم؟</h2>
+                    <p data-key="content_section_desc">الفنتانيل يتصدر المشهد كسبب رئيسي، وفهمنا لانتشاره يساعدنا في حماية أصحابنا وأهالينا من الخطر.</p>
+                </div>
+                <div class="chart-side">
+                    <div class="chart-box"><canvas id="contentChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stack-section" id="fentanyl-facts">
+            <div class="container">
+                <div class="text-side">
+                    <span class="badge" data-key="facts_badge"><i class="fas fa-microscope"></i> حقائق طبية</span>
+                    <h2 data-key="facts_title">ما الذي يجعل الفنتانيل مختلفاً؟</h2>
+                    
+                    <div class="facts-list">
+                        <div class="fact-entry">
+                            <i class="fas fa-bolt"></i>
+                            <div class="fact-content">
+                                <strong data-key="p_power_h">القوة الفائقة</strong>
+                                <p data-key="p_power_d">أقوى من المورفين بـ 50 إلى 100 مرة. فعال طبياً لكنه مميت بدون إشراف دقيق.</p>
+                            </div>
+                        </div>
+                        <div class="fact-entry">
+                            <i class="fas fa-syringe"></i>
+                            <div class="fact-content">
+                                <strong data-key="p_use_h">طرق الاستخدام</strong>
+                                <p data-key="p_use_d">يُستخدم طبياً كحقن، لاصقات جلدية، أو بخاخات تحت إشراف الأطباء فقط.</p>
+                            </div>
+                        </div>
+                        <div class="fact-entry">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <div class="fact-content">
+                                <strong data-key="p_side_h">الآثار الجانبية</strong>
+                                <p data-key="p_side_d">يسبب نعاساً شديداً وتباطؤاً في التنفس، وفي الجرعات الخاطئة يؤدي لتوقف الرئتين.</p>
+                            </div>
+                        </div>
+                        <div class="fact-entry">
+                            <i class="fas fa-user-secret"></i>
+                            <div class="fact-content">
+                                <strong data-key="p_illegal_h">خطر الشارع</strong>
+                                <p data-key="p_illegal_d">أغلب الوفيات تأتي من نسخ غير قانونية تُخلط سراً، وهي السبب الرئيسي للأزمة عالمياً.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stack-section" id="accuracy">
+            <div class="container reverse">
+                <div class="text-side">
+                    <h2 data-key="rescue_title">كيف تنقذ حياة؟ (دليل الطوارئ)</h2>
+                    <div class="rescue-guide">
+                        <div class="step">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="step-text">
+                                <h4 data-key="step_1_title">1. اتصل فوراً</h4>
+                                <p data-key="step_1_desc">اتصل بالإسعاف فوراً عند رؤية شخص فاقد للوعي أو يجد صعوبة في التنفس.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <i class="fas fa-pills"></i>
+                            <div class="step-text">
+                                <h4 data-key="step_2_title">2. استخدم المنقذ</h4>
+                                <p data-key="step_2_desc">اطلب بخاخ 'نالوكسون' (Narcan) من الصيدلية؛ هو حل سريع وآمن يعيد التنفس فوراً.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <i class="fas fa-heartbeat"></i>
+                            <div class="step-text">
+                                <h4 data-key="step_3_title">3. وضعية الإفاقة</h4>
+                                <p data-key="step_3_desc">ضع الشخص على جانبه وابقَ معه لضمان سلامة تنفسه حتى وصول المساعدة.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-side">
+                    <div class="chart-box"><canvas id="accuracyChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-title">مبادرة بصيرة | <span data-key="footer_name">عبدالرحمن العيسوي</span></p>
+    </footer>
+
+    <script src="script_report.js"></script>
+</body>
+</html>
